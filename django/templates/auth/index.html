@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Educational Website</title>
+    <style>
+      /* CSS for landing page */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .header {
+        background-color: #333;
+        color: #fff;
+        padding: 30px;
+        text-align: center;
+      }
+
+      .hero {
+        background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+          ),
+          url("path_to_your_image.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+        text-align: center;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+      }
+
+      .call-to-action {
+        text-align: center;
+        margin: 40px;
+      }
+
+      .call-to-action a {
+        display: inline-block;
+        padding: 14px 32px;
+        background-color: #ff5e3a;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+
+      .call-to-action a:hover {
+        background-color: #e65029;
+      }
+
+      .call-to-action p {
+        font-size: 18px;
+        color: #555;
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <title>My Educational Website</title>
+    <style>
+      /* CSS for navigation bar */
+      .navbar {
+        background-color: #807e7ea2;
+        padding: 20px;
+        margin-bottom: 0px;
+        display: flex;
+        justify-content: flex-end;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        border-radius: 20%;
+        position: relative;
+      }
+
+      .navbar a {
+        color: #fff;
+        text-decoration: none;
+        margin-right: 20px;
+        font-size: 20px;
+        font-style: oblique;
+        font-weight: bolder;
+        transition: color 0.3s ease;
+      }
+
+      .navbar a:hover {
+        color: #ff5e3a;
+      }
+
+      .navbar a.active {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body style="background-color: black">
+    <div class="navbar">
+      <a href="index" class="active">Home</a>
+      <a href="studentdah.html">Courses</a>
+      <a href="landing.html">Dashboard</a>
+      <a href="login.html">Profile</a>
+      <a href="signin">account</a>
+    </div>
+
+    <!-- Rest of your website content goes here -->
+  </body>
+
+
+    <header class="header">
+      <h1>Welcome to My Educational Website</h1>
+    </header>
+    {%for message in messages%}
+    <div class="alert alert={{message.tags}} alert-dismissible fade show" role="alert">
+      <strong>message<strong>{{message}} <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aris-hidden="true">&times;<span><button><div>
+          {% endfor %}
+{%if user.is_authenticated%}
+<h3>Hello {{fname}} <h3>
+  <h3>you have successfully logged in<h3>
+    <section class="call-to-action">
+      <a href="/signin">signout</a>
+    </section>
+{% else %}
+
+<section class="call-to-action">
+  <a href="/signup">signup</a>
+</section>
+{% endif %}
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Learn, Grow, Succeed</h1>
+        <p>Unlock your potential with our online educational programs</p>
+        <a href="#">Join Now</a>
+      </div>
+    </section>
+
+    <section class="call-to-action">
+      <p>Ready to take your learning journey to the next level?</p>
+      <a href="/signin">signin</a>
+      <a href="/signup">signup</a>
+    </section>
+
+    <!-- Rest of your website content goes here -->
+  </body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration/Login</title>
+    <style>
+      /* CSS for registration/login page */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f1f1f1;
+      }
+
+      .container {
+        max-width: 400px;
+        margin: 100px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 4px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      .form-group input {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .form-group button {
+        width: 100%;
+        padding: 10px;
+        background-color: #ff5e3a;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .form-group button:hover {
+        background-color: #e65029;
+      }
+    </style>
+  </head>
+  <body>
+    <head>
+        <title>My Educational Website</title>
+        <style>
+          /* CSS for navigation bar */
+          .navbar {
+            background-color: #807e7ea2;
+            padding: 20px;
+            margin-bottom: 0px;
+            display: flex;
+            justify-content: flex-end;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            border-radius: 20%;
+            position: relative;
+          }
+    
+          .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 20px;
+            font-style: oblique;
+            font-weight: bolder;
+            transition: color 0.3s ease;
+          }
+    
+          .navbar a:hover {
+            color: #ff5e3a;
+          }
+    
+          .navbar a.active {
+            font-weight: bold;
+          }
+        </style>
+      </head>
+      <body style="background-color: black">
+        <div class="navbar">
+          <a href="index" class="active">Home</a>
+          <a href="studentdah.html">Courses</a>
+          <a href="landing.html">Dashboard</a>
+          <a href="login.html">Profile</a>
+          <a href="signin">account</a>
+        </div>
+    
+        <!-- Rest of your website content goes here -->
+      </body>
+    <div class="container">
+      <h2>Login</h2>
+      <form action="/signin" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter your username"
+          />
+        </div>
+        
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+          />
+        </div>
+        <div class="form-group">
+          <button type="submit"><a href="/signup">Register</a></button>
+        </div>
+        <div class="form-group">
+          <button type="submit">Login</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
